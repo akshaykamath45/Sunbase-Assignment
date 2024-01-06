@@ -52,7 +52,7 @@ const Login = () => {
           isClosable: true,
         });
         setTimeout(() => {
-          navigate("/add-customer");
+          navigate("/view-customers");
         }, 1500);
       } else {
         // handling invalid input/non-json response

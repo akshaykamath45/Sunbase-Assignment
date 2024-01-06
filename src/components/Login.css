@@ -1,18 +1,17 @@
 .App {
-    margin: 80px;
-  }
-  .header {
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  .login-id {
-    margin-bottom: 20px;
-  }
-  .password {
-    width: 360px;
-  }
-  
-  .submit-button {
-    margin-top: 15px;
-  }
-  
+  margin: 80px;
+}
+.header {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.login-id {
+  margin-bottom: 20px;
+}
+.password {
+  width: 360px;
+}
+
+.submit-button {
+  margin-top: 15px;
+}

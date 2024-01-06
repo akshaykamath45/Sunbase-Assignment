@@ -61,7 +61,7 @@ const AddCustomer = () => {
         });
         setTimeout(() => {
           navigate("/view-customers");
-        }, 1500);
+        }, 1000);
       } else {
         console.error("Error creating customer:", response.status);
         console.log(response);
@@ -76,9 +76,22 @@ const AddCustomer = () => {
     }
   };
 
+  const handleNavigation = () => {
+    navigate("/view-customers");
+  };
+
   return (
     <div>
+      <Button
+        colorScheme="blue"
+        size="sm"
+        onClick={handleNavigation}
+        style={{ marginBottom: "15px" }}
+      >
+        View Customers
+      </Button>
       <h1 className="header">Add Customer</h1>
+
       <form onSubmit={handleSubmit}>
         <Input
           variant="outline"

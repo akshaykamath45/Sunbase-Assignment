@@ -1,9 +1,11 @@
+import "./AddCustomer.css";
 import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
 import { AccessContext } from "../contexts/AccessContext";
+import { useNavigate } from "react-router";
 
 const AddCustomer = () => {
   const [firstName, setFirstName] = useState("");
@@ -21,6 +23,8 @@ const AddCustomer = () => {
   useEffect(() => {
     console.log("Access token received on customer page:", accessToken);
   }, [accessToken]);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,6 +59,9 @@ const AddCustomer = () => {
           status: "success",
           isClosable: true,
         });
+        setTimeout(() => {
+          navigate("/view-customers");
+        }, 1500);
       } else {
         console.error("Error creating customer:", response.status);
         console.log(response);

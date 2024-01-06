@@ -51,7 +51,9 @@ const Login = () => {
           status: "success",
           isClosable: true,
         });
-        navigate("/add-customer");
+        setTimeout(() => {
+          navigate("/add-customer");
+        }, 1500);
       } else {
         // handling invalid input/non-json response
         const textData = await response.text();

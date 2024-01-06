@@ -3,6 +3,7 @@ import { Input } from "@chakra-ui/react";
 import { InputGroup } from "@chakra-ui/react";
 import { InputRightElement } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 import { useState } from "react";
 function App() {
   const [show, setShow] = useState(false);
@@ -10,6 +11,8 @@ function App() {
 
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
+
+  const toast = useToast();
 
   const handleSubmit = async () => {
     try {
@@ -21,21 +24,32 @@ function App() {
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           login_id: loginId,
           password: password,
         }),
       });
 
-      const data = await response.json();
+      console.log(response);
       if (response.ok) {
-        // For simplicity, this example logs the access token to the console
+        const data = await response.json();
+        // access token
         console.log("Access Token:", data.access_token);
         console.log(response);
+        toast({
+          title: `User Authenticated`,
+          status: "success",
+          isClosable: true,
+        });
       } else {
-        // Handle authentication error
-        console.error("Authentication failed:", data.error);
+        // handling invalid input/non-json response
+        const textData = await response.text();
+        console.log("Error:", textData);
+        toast({
+          title: `Invalid User`,
+          status: "error",
+          isClosable: true,
+        });
       }
     } catch (error) {
       console.error("Error during authentication:", error);

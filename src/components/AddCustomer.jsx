@@ -19,7 +19,7 @@ const AddCustomer = () => {
 
   const toast = useToast();
 
-  const { accessToken, setAccessToken } = useContext(AccessContext);
+  const { accessToken } = useContext(AccessContext);
   useEffect(() => {
     console.log("Access token received on customer page:", accessToken);
   }, [accessToken]);

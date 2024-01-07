@@ -21,7 +21,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const { accessToken, setAccessToken } = useContext(AccessContext);
+  const { setAccessToken } = useContext(AccessContext);
 
   const handleSubmit = async () => {
     try {

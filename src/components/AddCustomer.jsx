@@ -37,7 +37,7 @@ const AddCustomer = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`, // Replace with the actual access token
+          Authorization: `Bearer ${accessToken}`, 
         },
 
         body: JSON.stringify({
@@ -90,7 +90,7 @@ const AddCustomer = () => {
       >
         View Customers
       </Button>
-      <h1 className="header">Add Customer</h1>
+      <h1 className="header" style={{marginBottom:"20px"}}>Add Customer</h1>
 
       <form onSubmit={handleSubmit}>
         <Input

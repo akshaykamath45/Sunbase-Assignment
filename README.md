@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+- In this assignment, I faced a few challenges.Firstly, there was a CORS error during authentication. I tried different solutions like using a proxy server and browser extensions, but they didn't work. Eventually, I found a workaround by disabling Chrome web security through a command in the prompt.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Later, I ran into an issue with API responses. The success response was in JSON format, but the invalid authentication response was in text. After testing using Postman, I identified the problem and adjusted my code accordingly.
 
-## Available Scripts
+- Lastly, managing the global context for the bearer access token was tricky. To solve this, I used the useContext hook to handle global state efficiently.
 
-In the project directory, you can run:
 
-### `npm start`
+- Tech Stack Used : React,JavasScript,HTML,CSS.
+- Library : Chakra UI (For Designing UI).
+- Concepts/Hooks : useState,useContext(for maintaining the accessToken,as state management),useEffect(for preventing re-renders),useNavigate(for navigating to specific routes).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Login Screen/Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Show Password
+![Show Password](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/b901b42d-af1d-4c3e-afb5-7bac7e91545d)
 
-### `npm test`
+## Hide Password
+![Hide Password](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/c6539c6c-da2f-48c2-b03b-4a48b4568960)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# User Authenticated Response
+![Authenticated Response](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/779aa72c-55a3-4114-9517-62e2c9cd0791)
 
-### `npm run build`
+If the user is authenticated, it will move to the customer details page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# User Invalid Response
+![Invalid Response](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/1c785b93-6af7-4721-9531-410f4bcfc8cb)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Customer Details Page
+![Customer Details 1](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/3af1ea0f-3049-422b-8bd8-454958675170)
+![Customer Details 2](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/5d4bb677-6aa6-4d56-b3e7-01ac3c35e86d)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Add/Create new customer
+![Add New Customer](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/48d123ac-a1cf-45ef-970a-d9e9dc82b683)
+![image](https://github.com/akshaykamath45/Sunbase-Assignment/assets/73344382/87653fe2-99ca-41aa-81f9-09069f7aef1d)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

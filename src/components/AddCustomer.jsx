@@ -30,7 +30,7 @@ const AddCustomer = () => {
     e.preventDefault();
 
     const apiUrl =
-      "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create";
+      "https://qa.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create";
 
     try {
       const response = await fetch(apiUrl, {

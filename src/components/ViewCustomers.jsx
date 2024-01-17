@@ -12,7 +12,7 @@ const ViewCustomers = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const apiUrl =
-      "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp";
+      "https://qa.sunbasedata.com/sunbase/portal/api/assignment.jsp";
 
     const fetchCustomerList = async () => {
       try {

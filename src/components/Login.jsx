@@ -26,7 +26,7 @@ const Login = () => {
   const handleSubmit = async () => {
     try {
       const apiUrl =
-        "https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp";
+        "https://qa.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp";
 
       const response = await fetch(apiUrl, {
         method: "POST",
